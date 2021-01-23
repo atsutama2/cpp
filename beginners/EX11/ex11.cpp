@@ -17,7 +17,7 @@ int main() {
             A -= b;
         } else if (op == "*") {
             A *= b;
-        } else if (op == "/") {
+        } else if (op == "/" && b != 0) {
             A /= b;
         } else {
             cout << "error" << endl;
