@@ -5,21 +5,24 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> Arr(N);
+    int Arr[N];
 
     for(int i=0; i < N; i++) {
-        cin >> Arr.at(i);
+        cin >> Arr[i];
     }
 
-    int i = 1;
+    int j = 1;
     int count = 0;
 
-    while (true) {
-        if(count == 2) {
-            cout << 2 << endl;
-            return 0;
+    for(int i=0; i < N; i++){
+        if(j == 2) {
+            cout << count << endl;
+            break;
         }
-        count = Arr.at(i);
+        j = Arr[j - 1];
+        count++;
     }
-    cout << -1 << endl;
+
+    if(j != 2) 
+        cout << -1 << endl;
 }
